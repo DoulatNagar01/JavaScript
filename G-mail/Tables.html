@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        th, td {
+          border:1px solid black;
+          border-collapse: collapse;
+
+        }
+
+        table{
+            border: 1px solid;
+            border-collapse: collapse;
+            color: chocolates;
+        }
+    </style>
+</head>
+<body style="display: flex; justify-content: center;">
+    <table style="margin-top: 15%;">
+        <caption>Marksheet</caption>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Science</th>
+                <th>Maths</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr aria-rowspan="2">
+                <td>1</td>
+                <td>Doulat</td>
+                <td style="text-align: center;">88</td>
+                <td style="text-align: center;">90</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="2" >Ritrik</td>
+                <td  style="text-align: center;">85</td>
+            </tr>
+            <tr>
+                <td rowspan="2">3</td>
+                <td>Kaif</td>
+                <td style="text-align: center;" rowspan="2" >80</td>
+                <td style="text-align: center;">95</td>
+            </tr>
+            <tr>
+                
+                <td>Alvin</td>
+                <td style="text-align: center;">98</td>
+            </tr>
+            <tr>
+
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>

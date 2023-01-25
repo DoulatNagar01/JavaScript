@@ -1,0 +1,34 @@
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.table1, .SideMenuTable{
+    justify-content: center;
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+    border-color: black;
+}
+.tr1 .th1, .td1 {
+    border: 1px solid;
+    border-collapse: collapse;
+    border-color: black;
+}
+.td1{
+    text-align: center;
+    justify-items: center;
+}
+.lable1{
+    text-align: center;
+}
+.sideBar{
+    justify-content: center;
+}
+.SideBarMenu1{
+    display: flow-root;
+}
+.button1{
+    font-size: 20px;
+}
+
