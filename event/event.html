@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="event.css">
+    </head>
+    <body>
+        <form action="" class="formbody" onsubmit="details(event)">
+            <label for="fname">First name:</label>
+            <input class="fnameLname" type="text" id="fname" name="fname" placeholder="First name" required><br><br>
+            <label for="lname">Last name:</label>
+            <input class="fnameLname" type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
+            <label for="age">Age:</label>
+            <input class="fnameLname" type="range" id="age" name="age" min="0" max="50" step="5"><br><br>
+            <label for="num">Number</label>
+            <input type="number" id="num" name="num" required><br><br>
+            <label for="textarea">Textarea</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10" required></textarea><br>
+            <label for="color">Choice your color :  </label>
+            <input type="color" id="color" name="color" required> <br><br>
+            <label for="vehicles">Vehicle :</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Car">
+            <label for="vehicle1"> I have a car</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Boat">
+            <label for="vehicle2"> I have a boat</label><br><br>
+            <label for="Gender">Gender :</label><br>
+            <input type="radio" id="male" name="Gender" value="male" required>
+            <label for="male"> Male</label><br>
+            <input type="radio" id="female" name="Gender" value="female" required>
+            <label for="female"> Female</label><br><br>
+            <input type="submit" value="submit">
+        </form>
+
+        <div class="yousubmmit" id="div">
+
+        </div>
+        <script src="event.js"></script>
+    </body>
+    </html>
