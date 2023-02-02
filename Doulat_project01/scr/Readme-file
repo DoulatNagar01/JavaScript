@@ -1,0 +1,16 @@
+#unix_git_readme:
+
+Welcome to minior project
+
+1. You have to create a HTML folder for the .html file.
+    => you have to move all .html file into HTML folder
+
+2. You have to create a CSS folder for the .css file.
+    => you have to move all .css file into CSS folder
+
+3. You have to create a JavaScript folder for the .js file.
+    => you have to move all .js file into JAvaScript folder
+
+4. Create a new folder name as Minor_project
+ 
+5. HTML, CSS and JavaScript folder are put into a minor project
