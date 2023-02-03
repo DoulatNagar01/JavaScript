@@ -1,8 +1,6 @@
-
-
-
+// Admin page js
+//upload img in admin page
 function uploadimages(e) {
-  let file = e.target.file;
   let reader = new FileReader();
   reader.addEventListener('load',function () {
       if (this.result && localStorage) {
@@ -16,7 +14,7 @@ function uploadimages(e) {
               images.push(reader.result);
           }
           localStorage.setItem('images', JSON.stringify(images));
-          alert("Image Storage in gellery page")
+          alert("Image Storage in gellery page");
       } else{
           alert('not success');
       }
@@ -25,11 +23,13 @@ function uploadimages(e) {
 }
 
 //end img upload
+// delete user.
 function deleteuser(userdetails) {
   let arr = JSON.parse(localStorage.getItem("details"));
   arr.splice(userdetails, 1);
   localStorage.setItem("details", JSON.stringify(arr));
 }
+// Accept userId.
 function acceptdeletuser(userdetails) {
   let arr2 = JSON.parse(localStorage.getItem("acceptData"));
   arr2.splice(userdetails, 1);
@@ -37,11 +37,11 @@ function acceptdeletuser(userdetails) {
   location.reload();
 }
 
+// Create new array in localstorage for Accept userid
 function acceptUser(userdetails) {
   let pendingData = JSON.parse(localStorage.getItem("details"));
   let acceptData = JSON.parse(localStorage.getItem("acceptData"));
   if (
-    localStorage.getItem("acceptData") &&
     localStorage.getItem("acceptData") &&
     typeof acceptData === "object"
   ) {
@@ -60,11 +60,10 @@ function acceptUser(userdetails) {
 }
 
 // registration details in localstorage
-
 function registration(form) {
+  alert("Your Request Send to Admin\n You can Login after Accept your request")
   form.preventDefault();
   let detailsone = {};
-
   for (let i = 0; i < form.target.length - 3; i++) {
     detailsone = { ...detailsone, [form.target[i].name]: form.target[i].value };
   }
@@ -92,7 +91,7 @@ function getingInfo() {
       if (document.getElementById('imglists')) {
       images.map((val)=>{
           let preview = document.getElementById('imglists');
-          preview.innerHTML += ['<div class="row my-3"><div class="d-flex justify-content-center border border-dark"><img src="'+ val +'" alt="Img" height="350" srcset=""></div><div class="col-4 border">like</div><div class="col-4 border">comment</div><div class="col-4 border">other</div></div>'].join('');
+          preview.innerHTML += ['<div class="row my-3"><div class="d-flex justify-content-center border border-dark"><img class="imgadjust" src="'+ val +'" alt="Img" height="350" srcset=""></div><div class="col-4 border d-grid"><button class="btn btn-outline-info fa fa-heart"></button></div><div class="col-4 border"><input type="text" class="form-control" placeholder="Comment"></div><div class="col-4 border text-center"><button class="btn btn-outline-dark"><i class="fa fa-share"></i> Share</button></div></div>'].join('');
        });
      }
 }
@@ -149,18 +148,20 @@ function checkcredential(credent) {
     window.location.href = "adminPage.html";
   } else if (
     database &&
-    database.filter((val, idx) => {
+    database.filter((val) => {
+      console.log(credent.target.loginName.value,val);
       return (
         credent.target.loginName.value === val.EmailId &&
         credent.target.loginPassword.value === val.password
       );
+      
     }).length
   ) {
     console.log(credent.target.loginName.value);
     window.location.href = "Home_page.html";
     localStorage.setItem("Emailid", credent.target.loginName.value);
   } else {
-    alert("Email-Id or password is Wrong");
+    alert(" Email-Id or password is Wrong\n OR \n Request is Pending"  );
   }
 }
 
