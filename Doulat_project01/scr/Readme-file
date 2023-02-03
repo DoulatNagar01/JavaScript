@@ -2,15 +2,29 @@
 
 Welcome to minior project
 
-1. You have to create a HTML folder for the .html file.
+1. You have to create a HTML folder for the .html file. 
+    =>To make a folder using terminal open write command mkdir folderName
     => you have to move all .html file into HTML folder
 
 2. You have to create a CSS folder for the .css file.
+    => =>To make a folder using terminal open write command mkdir folderName
     => you have to move all .css file into CSS folder
 
 3. You have to create a JavaScript folder for the .js file.
+    => =>To make a folder using terminal open write command mkdir folderName
     => you have to move all .js file into JAvaScript folder
 
 4. Create a new folder name as Minor_project
  
-5. HTML, CSS and JavaScript folder are put into a minor project
+5. HTML, CSS and JavaScript folder are put into a Minor_project folder. 
+
+And another way:-
+
+ 1.Create project repo at root directory using command => mkdir
+ 2. Open the folder using Vs code. Then open vs teminal. 
+ 3. In terminal 
+               => get clone https://github.com/DoulatNagar01/JavaScript/tree/main/Doulat_project01.
+ 4. Open the terminal on your system => ctrl+shift+`
+ 5. Navigate to the folder containing the HTML file.
+ 6. Open with the liveServer
+ 
